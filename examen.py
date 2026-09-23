@@ -48,6 +48,9 @@ cantalfcomp = 0
 canttostcomp = 0
 productos = [ "agua", "alfajor", "tostado"]
 precio = [ "700", "900", "2200"]
+opcion1= 0
+
+
 
 nombre = input("¿cual es su nombre?")
 platadisp = int(input("¿cuanto dinero tiene para gastar?"))
@@ -55,11 +58,11 @@ print("===== KIOSCO ESCOLAR =====")
 print(f"hola {nombre}.")
 print(f"saldo disponible: ${platadisp}")
 
-while resp != "no" :
- print("hay : 1.agua, 2.alfajor, 3.tostado")
+while opcion1 != 5 :
+ print("1.agua, 2.alfajor, 3.tostado, 4. Consultar pedido, 5. Finalizar compra")
 
  opcion1 = int(input("¿que opcion desea comprar?"))
- while opcion1 != 1 and opcion1 != 2 and opcion1 != 3 :
+ while opcion1 != 1 and opcion1 != 2 and opcion1 != 3 and opcion1 != 4 and opcion1 != 5 :
     print ("opcion no reconocida, debe responer 1, 2 o 3 ")
     opcion1 = int(input("¿que opcion desea comprar?"))
       
@@ -106,4 +109,16 @@ while resp != "no" :
     else : 
         print ("saldo insuficiente")
  
- resp = input("¿quiere comprar algo mas?")
+ 
+ if opcion1 == 4:
+    if canttotalprodcomp == 0 :
+      print ("el pedido estaba vacio")
+    else :
+     print("===== PEDIDO ACTUAL =====")
+     print(f"hola {nombre}.")
+     print(f"productos comprados: {canttotalprodcomp}")
+     print(f"dinero gastado: {dinerogastado}")
+     print(f"saldo disponible: ${platadisp}")
+     print(f"alfajores comprados: {cantalfcomp}")
+     print(f"aguas comprados: {cantaguascomp}")
+     print(f"tostados comprados: {canttostcomp}")
