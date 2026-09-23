@@ -54,3 +54,46 @@ platadisp = int(input("¿cuanto dinero tiene para gastar?"))
 print("===== KIOSCO ESCOLAR =====")
 print(f"hola {nombre}.")
 print(f"saldo disponible: ${platadisp}")
+
+
+print("hay : 1.agua, 2.alfajor, 3.tostado")
+opcion1 = int(input("¿que opcion desea comprar?"))
+while opcion1 != 1 and opcion1 != 2 and opcion1 != 3 :
+    print ("opcion no reconocida, debe responer 1, 2 o 3 ")
+    opcion1 = int(input("¿que opcion desea comprar?"))
+      
+      
+      
+if opcion1 == 1 :
+    print("producto seleccionado: agua")
+    print("precio: $700")
+    if platadisp >= 700 :
+        print ("compra realizada correctamente")
+        platadisp = (platadisp - 700)
+        print ("saldo restante:", platadisp) 
+    else : 
+        print ("saldo insuficiente")
+     
+elif opcion1 == 2 :
+    
+    print("producto seleccionado: alfajor")
+    print("precio: $900")
+    if platadisp >= 900 :
+        print ("compra realizada correctamente")
+        platadisp = (platadisp - 900)
+        print ("saldo restante:", platadisp)
+    else : 
+        print ("saldo insuficiente")
+  
+elif opcion1 == 3 :
+    
+    print("producto seleccionado: tostado")
+    print("precio: $2200")
+    
+    if platadisp >= 2200 :
+        print ("compra realizada correctamente")
+        platadisp = (platadisp - 2200)
+        print ("saldo restante:", platadisp)
+    else : 
+        print ("saldo insuficiente")
+ 
