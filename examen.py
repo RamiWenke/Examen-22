@@ -1,6 +1,6 @@
 # Examen práctico - Sistema de pedidos del kiosco
-# Nombre y apellido:
-# Curso:
+# Nombre y apellido:ramiro puglisi wenk
+# Curso:2o 2
 #
 # IMPORTANTE:
 # Resolver el programa siguiendo las etapas indicadas en el README.md.
@@ -39,3 +39,18 @@
 
 # Mostrar el estado actual del pedido.
 # Recorrer las listas con un for para mostrar productos y precios.
+
+
+dinerogastado = 0
+canttotalprodcomp = 0
+cantaguascomp = 0
+cantalfcomp = 0
+canttostcomp = 0
+productos = [ "agua", "alfajor", "tostado"]
+precio = [ "700", "900", "2200"]
+
+nombre = input("¿cual es su nombre?")
+platadisp = int(input("¿cuanto dinero tiene para gastar?"))
+print("===== KIOSCO ESCOLAR =====")
+print(f"hola {nombre}.")
+print(f"saldo disponible: ${platadisp}")
