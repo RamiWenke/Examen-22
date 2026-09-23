@@ -40,7 +40,7 @@
 # Mostrar el estado actual del pedido.
 # Recorrer las listas con un for para mostrar productos y precios.
 
-
+resp = "hola profe"
 dinerogastado = 0
 canttotalprodcomp = 0
 cantaguascomp = 0
@@ -55,26 +55,29 @@ print("===== KIOSCO ESCOLAR =====")
 print(f"hola {nombre}.")
 print(f"saldo disponible: ${platadisp}")
 
+while resp != "no" :
+ print("hay : 1.agua, 2.alfajor, 3.tostado")
 
-print("hay : 1.agua, 2.alfajor, 3.tostado")
-opcion1 = int(input("¿que opcion desea comprar?"))
-while opcion1 != 1 and opcion1 != 2 and opcion1 != 3 :
+ opcion1 = int(input("¿que opcion desea comprar?"))
+ while opcion1 != 1 and opcion1 != 2 and opcion1 != 3 :
     print ("opcion no reconocida, debe responer 1, 2 o 3 ")
     opcion1 = int(input("¿que opcion desea comprar?"))
       
-      
-      
-if opcion1 == 1 :
+     
+ if opcion1 == 1 :
     print("producto seleccionado: agua")
     print("precio: $700")
     if platadisp >= 700 :
         print ("compra realizada correctamente")
         platadisp = (platadisp - 700)
         print ("saldo restante:", platadisp) 
+        cantaguascomp = cantaguascomp + 1
+        dinerogastado = dinerogastado + 700
+        canttotalprodcomp = canttotalprodcomp + 1
     else : 
         print ("saldo insuficiente")
      
-elif opcion1 == 2 :
+ elif opcion1 == 2 :
     
     print("producto seleccionado: alfajor")
     print("precio: $900")
@@ -82,10 +85,13 @@ elif opcion1 == 2 :
         print ("compra realizada correctamente")
         platadisp = (platadisp - 900)
         print ("saldo restante:", platadisp)
+        cantalfcomp = cantalfcomp + 1
+        dinerogastado = dinerogastado + 900
+        canttotalprodcomp = canttotalprodcomp + 1
     else : 
         print ("saldo insuficiente")
   
-elif opcion1 == 3 :
+ elif opcion1 == 3 :
     
     print("producto seleccionado: tostado")
     print("precio: $2200")
@@ -94,6 +100,10 @@ elif opcion1 == 3 :
         print ("compra realizada correctamente")
         platadisp = (platadisp - 2200)
         print ("saldo restante:", platadisp)
+        canttostcomp = canttostcomp + 1
+        dinerogastado = dinerogastado + 2200
+        canttotalprodcomp = canttotalprodcomp + 1
     else : 
         print ("saldo insuficiente")
  
+ resp = input("¿quiere comprar algo mas?")
